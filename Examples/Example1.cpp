@@ -10,7 +10,7 @@
 THIS WILL DISPLAY 1024 COLOR CHANGING MOVING RECTANGLES ON A 1000x800 WINDOW
 */
 
-
+// this is more of a "how to make systems" example
 
 using namespace NiceEngine::Core;
 using namespace NiceEngine;
@@ -46,7 +46,7 @@ void change_color(entt::registry *registry){
 // WHAT ABOUT EVENT HANDLING?
 // the library will run SDL_PollEvent every frame, to get its result you will have to use Engine::events.get_event()
 // other than that, you can use the good old SDL_GetKeyboardState and SDL_GetMouseState methods, which will send a const state of input devices
-// lets make a system that writes Hello to iostream every time we press the SPACE key
+// lets make a system that writes Hello to stdout every time we press the SPACE key
 void say_hello(entt::registry *registry){ // it still takes registry as a parameter, because scenemanager will give it to every function it executes
     SDL_Event event = Engine::events->get_event();
     switch (event.type)
