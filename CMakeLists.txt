@@ -21,12 +21,8 @@ add_library(
   NiceEngine/Core/ErrorWatcher.cpp
 )
 
-add_executable(
-  Example1
-  Examples/Example1.cpp
-)
+add_subdirectory(Examples)
 
 INCLUDE_DIRECTORIES(${SDL2_INCLUDE_DIRS} ${SDL2IMAGE_INCLUDE_DIRS} ${SDL2TTF_INCLUDE_DIRS})
 TARGET_LINK_LIBRARIES(${PROJECT_NAME} ${SDL2_LIBRARIES} ${SDL2IMAGE_LIBRARIES} ${SDL2TTF_LIBRARIES})
 
-TARGET_LINK_LIBRARIES(Example1 LINK_PUBLIC /home/kaan/programming/cpp/NiceEngine/build/libNiceEngine.a)
