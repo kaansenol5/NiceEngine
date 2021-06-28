@@ -20,5 +20,5 @@ Shortly, you can.
 
 # How to do all these
 
-See Examples/Example1.cpp, it has comments.
+See examples in Examples/
 
