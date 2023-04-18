@@ -1,6 +1,4 @@
-#include "../NiceEngine/Core/Engine.hpp"
-#include "../NiceEngine/Builtins/Components/Transform.hpp"
-#include "../NiceEngine/Builtins/Systems/render_transforms.hpp"
+#include "../NiceEngine.hpp"
 
 #include <string>
 #include <iostream>

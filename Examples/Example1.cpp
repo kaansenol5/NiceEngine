@@ -1,6 +1,4 @@
-#include "../NiceEngine/Core/Engine.hpp"
-#include "../NiceEngine/Builtins/Components/Transform.hpp"
-#include "../NiceEngine/Builtins/Systems/render_transforms.hpp"
+#include "../NiceEngine.hpp"
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_ttf.h>
 #include <SDL2/SDL_image.h>
@@ -71,7 +69,7 @@ void say_hello(entt::registry *registry){ // it still takes registry as a parame
 int main(){
     srand(time(NULL));
     Engine engine((char*)"DEMO", 1000, 800); // initialize engine, sdl, open window, create renderer
-    NiceEngine::SceneManagement::Scene *scene = new Scene; // create a new scene on the heap
+    NiceEngine::SceneManagement::Scene *scene = new NiceEngine::SceneManagement::Scene; // create a new scene on the heap
     engine.target_FPS = 60;
     for(unsigned i = 0; i < 1024; i++){
         entt::entity square = scene->new_entity(); // add a new entity to the scene registry
